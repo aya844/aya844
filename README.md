@@ -1,7 +1,6 @@
 <div align="center">
 
-# مرحبا، أنا إيا 👋
-# Hi, I'm Eya Bargouth
+# Hi 👋, I'm Eya Bargouth 
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&color=A78BFA&width=700&lines=AI+%26+Full-Stack+Engineering+Student;RAG+Pipelines+%7C+Knowledge+Graphs+%7C+EEG+Signals;Turning+research+papers+into+working+systems)](https://git.io/typing-svg)
 
@@ -19,18 +18,9 @@
 ---
 
 ## 🧠 About Me
-
-```python
-eya = {
-    "education"  : "ICT Engineering @ INSAT, Tunis (Networks & Telecommunications)",
-    "focus"      : ["AI Systems", "RAG Pipelines", "Knowledge Graphs", "Signal Processing"],
-    "currently"  : "Building Research Memory Agent over 2,500+ scientific papers",
-    "loves"      : ["Research papers 📄", "Math proofs 🔢", "Acrylic painting 🎨", "Violin 🎻"],
-    "speaks"     : ["Arabic 🇹🇳", "French 🇫🇷", "English 🇬🇧", "Deutsch 🇩🇪"],
-}
-```
-
-I don't just use AI tools — I read the papers behind them. My projects are grounded in mathematical theory first, implementation second. From spectral EEG features derived from Fourier transforms to cosine similarity in high-dimensional embedding spaces, every line of code is backed by a proof somewhere.
+I'm an ICT Engineering student at **INSAT, Tunis**, specializing in Networks & Telecommunications with a deep focus on AI systems, RAG pipelines, knowledge graphs, and signal processing. I come from a rigorous **Mathematics & Physics preparatory cycle**, and that foundation shapes everything I build — I don't just use AI tools, I read the papers behind them.
+ 
+Outside of code, you'll find me lost in a research paper 📄, working through a math proof 🔢, painting with acrylics 🎨, reading Books or playing violin 🎻.
 
 ---
 
@@ -49,10 +39,8 @@ I don't just use AI tools — I read the papers behind them. My projects are gro
 ### 🔗 LLM Orchestration & RAG
 <p>
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"/>
-  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/ChromaDB-FF5A1F?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/FAISS-0066CC?style=for-the-badge"/>
 </p>
 
