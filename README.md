@@ -4,8 +4,6 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&color=A78BFA&width=700&lines=AI+%26+Full-Stack+Engineering+Student;Turning+research+papers+into+working+systems)](https://git.io/typing-svg)
 
-<img src="https://komarev.com/ghpvc/?username=aya844&color=A78BFA&style=flat-square" alt="Profile Views"/>
-
 </div>
 
 ---
