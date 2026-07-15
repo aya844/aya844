@@ -2,7 +2,7 @@
 
 # Hi 👋, I'm Eya Bargouth 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&color=A78BFA&width=700&lines=AI+%26+Full-Stack+Engineering+Student;Turning+research+papers+into+working+systems)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&color=A78BFA&width=700&lines=AI+%26+Data+Science+Engineering+Student;Turning+research+papers+into+working+systems)](https://git.io/typing-svg)
 
 </div>
 
