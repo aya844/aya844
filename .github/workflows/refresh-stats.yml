@@ -1,0 +1,46 @@
+name: Refresh GitHub Stats Cache
+
+on:
+  schedule:
+    # Chaque jour 
+    - cron: '0 0 * * *'
+  
+  # Permet de lancer manuellement depuis l'onglet "Actions"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Inject cache-busting timestamp
+        run: |
+          TIMESTAMP=$(date +%s)
+          
+          # On remplace proprement l'ancien &v=... par un nouveau timestamp
+          # (perl est plus robuste que sed pour les regex complexes)
+          
+          perl -i -pe "s|(github-readme-stats\.vercel\.app/api\?username=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
+          perl -i -pe "s|(github-readme-stats\.vercel\.app/api/top-langs/\?username=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
+          perl -i -pe "s|(streak-stats\.demolab\.com\?user=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if ! git diff --quiet; then
+            git add README.md
+            git commit -m "chore: refresh GitHub stats cache [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
