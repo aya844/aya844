@@ -106,12 +106,12 @@ I come from a **Mathematics & Physics preparatory cycle** — the kind of traini
 ## 📈 GitHub Stats
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=aya844&show_icons=true&theme=tokyonight&hide_border=true&title_color=A78BFA&icon_color=A78BFA"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aya844&layout=compact&theme=tokyonight&hide_border=true&title_color=A78BFA"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=aya844&v=1786151200&show_icons=true&theme=tokyonight&hide_border=true&title_color=A78BFA&icon_color=A78BFA"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aya844&v=1786151200&layout=compact&theme=tokyonight&hide_border=true&title_color=A78BFA"/>
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=aya844&theme=tokyonight&hide_border=true&ring=A78BFA&fire=A78BFA&currStreakLabel=A78BFA"/>
+  <img src="https://streak-stats.demolab.com?user=aya844&v=1786151200&theme=tokyonight&hide_border=true&ring=A78BFA&fire=A78BFA&currStreakLabel=A78BFA"/>
 </div>
 
 ---
