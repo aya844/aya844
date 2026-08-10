@@ -2,10 +2,10 @@ name: Refresh GitHub Stats Cache
 
 on:
   schedule:
-    # Chaque jour 
-    - cron: '0 0 * * *'
-  
-  # Permet de lancer manuellement depuis l'onglet "Actions"
+    # Tous les jours à 00:17 UTC
+    - cron: "17 0 * * *"
+
+  # Permet de lancer manuellement depuis l'onglet Actions
   workflow_dispatch:
 
 permissions:
@@ -14,7 +14,7 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,23 +24,31 @@ jobs:
       - name: Inject cache-busting timestamp
         run: |
           TIMESTAMP=$(date +%s)
-          
-          # On remplace proprement l'ancien &v=... par un nouveau timestamp
-          # (perl est plus robuste que sed pour les regex complexes)
-          
-          perl -i -pe "s|(github-readme-stats\.vercel\.app/api\?username=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
-          perl -i -pe "s|(github-readme-stats\.vercel\.app/api/top-langs/\?username=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
-          perl -i -pe "s|(streak-stats\.demolab\.com\?user=aya844)(?:&v=\d+)?|\1\&v=$TIMESTAMP|g" README.md
+
+          echo "Timestamp: $TIMESTAMP"
+
+          # GitHub Readme Stats
+          sed -i -E "s|(github-readme-stats\.vercel\.app/api\?username=aya844[^\" ]*)|\1\&v=$TIMESTAMP|g" README.md
+
+          # Top languages
+          sed -i -E "s|(github-readme-stats\.vercel\.app/api/top-langs/\?username=aya844[^\" ]*)|\1\&v=$TIMESTAMP|g" README.md
+
+          # Streak stats
+          sed -i -E "s|(streak-stats\.demolab\.com\?user=aya844[^\" ]*)|\1\&v=$TIMESTAMP|g" README.md
+
+      - name: Show changes
+        run: |
+          git diff -- README.md
 
       - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          if ! git diff --quiet; then
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
             git add README.md
             git commit -m "chore: refresh GitHub stats cache [skip ci]"
             git push
-          else
-            echo "No changes to commit."
           fi
